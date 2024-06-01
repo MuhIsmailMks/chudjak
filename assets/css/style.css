@@ -3,34 +3,29 @@
     padding: 0;
     box-sizing: border-box;
 }
+ 
 
 @font-face {
-    font-family: "donk";
-    src: url('../fonts/badonk-a-donk.regular.ttf') format('truetype');
+    font-family: "baloo";
+    src: url('../fonts/baloo.regular.ttf') format('truetype');
 }
 
-@font-face {
-    font-family: "ink-free";
-    src: url('../fonts/Inkfree.ttf') format('truetype');
+:root{ 
+    --font-baloo: "baloo", sans-serif;
 }
 
-@font-face {
-    font-family: "p22-bold";
-    src: url('../fonts/P22Nudgewink-Bold.ttf') format('truetype');
-}
+.titan-one-regular {
+    font-family: "Titan One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 
-@font-face {
-    font-family: "p22-regular";
-    src: url('../fonts/P22NudgewinkPro-Regular.ttf') format('truetype');
-}
-
-:root{
-    --annie-font: "Annie Use Your Telescope", cursive; 
-    --font-donk: "donk", cursive;
-    --font-ink-free: "ink-free", sans-serif;
-    --font-p22_bold: "p22-bold", sans-serif;
-    --font-p22_regular: "p22-regular", sans-serif;
-}
+  .delius-regular {
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 
 
 html{
@@ -39,7 +34,7 @@ html{
 
 
 body{
-    font-family: var(--font-p22_bold);
+    font-family: var(--font-baloo);
 }
 
 .ink-free_font{
@@ -47,6 +42,32 @@ body{
 }
 
 /* amimation */ 
+/* cloud animation */
+.right_animation_cloud{
+    animation: cloud_right 30s linear infinite;
+}
+
+@keyframes cloud_right {
+    0%,100%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(-200px);
+    }
+}
+
+.left_animation_cloud{
+    animation: cloud_left 30s linear infinite;
+}
+
+@keyframes cloud_left {
+    0%,100%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(200px);
+    }
+}
 
 /* text slider animation */
 /* marquee text slider */
@@ -59,7 +80,7 @@ body{
     position: relative;
 
     width: 100%;
-    height: 166px;
+    height: 123px;
  
     gap: 0;
     padding-top: .5rem;
@@ -119,10 +140,10 @@ body{
 
 .marquee span{
     height: 100%; 
-    color: white;
-    font-family: var(--font-p22_bold);
+    color: white; 
     -webkit-text-stroke: 2.5px black;
     font-size: 64px;
+    text-transform: uppercase;
     font-weight: 700;
     padding: 0 2.5rem;
 }
@@ -155,7 +176,6 @@ body{
     justify-content: center;
     align-items: center;
 
-    font-family: var(--font-p22_bold);
     -webkit-text-stroke: 1.5px black;
 }
 
@@ -204,7 +224,7 @@ footer .box_animation:hover{
     height: 96%;
     
     clip-path:inherit;
-    background-color: #D51B3C;
+    background-color: #24A1DE;
     
     z-index: 9;
     overflow: hidden;
@@ -294,14 +314,14 @@ footer .moving-color_container{
 
 
 /* section styling */
-/* navbar */
-nav{
-    font-family: var(--font-ink-free);
-}
+/* navbar */ 
 
 nav .logo_nav p{
-    -webkit-text-stroke: 2px black;
-    font-family: var(--font-p22_bold);
+    -webkit-text-stroke: 2px black; 
+}
+
+nav li a{
+    font-family: "Delius", cursive;
 }
  
 /* menu button */ 
@@ -376,6 +396,14 @@ nav ul::after{
     -webkit-text-stroke: 2.5px black;
  }
 
+ .text_about{
+    text-shadow: 0 12px 0 black;
+    -webkit-text-stroke: 2.5px black;
+ }
+ .about_btn{ 
+    -webkit-text-stroke: 1.5px black;
+ }
+
  /* og section */
 .text_og p{
     -webkit-text-stroke: .5px black;
@@ -410,17 +438,9 @@ footer .box_animation {
     clip-path: polygon(0 4%, 100% 0, 98% 100%, 0% 100%);
 }
 
-footer .social:nth-child(1) .icon{
-    background: linear-gradient(96.66deg, #E0B5FC -14.92%, #FFD87D 60.94%, #554CFF 139.9%);
-}
-
-footer .social:nth-child(2) .icon{
-    background: linear-gradient(96.66deg, #FFFF7D -14.92%, #E0B5FC 69.46%, #FF4C9D 122.87%);
-}
-
-footer .social:nth-child(3) .icon{
-    background: linear-gradient(96.52deg, #7DE0FF -14.96%, #FF8383 56.76%, #85FF4C 119.1%);
-}
+footer .social  .icon{
+    background-color: white;
+} 
 
 .footer .email::before{
     content: "";
@@ -455,7 +475,7 @@ footer .social:nth-child(3) .icon{
     }
 
     .marquee span{
-        font-size: 24px;
+        font-size: 34px;
         -webkit-text-stroke: .9px black;
     }
     
@@ -463,6 +483,11 @@ footer .social:nth-child(3) .icon{
     .content_about p{
         -webkit-text-stroke: .7px black;
     } 
+
+    .text_about{
+        text-shadow: 0 6px 0 black;
+        -webkit-text-stroke: 1.5px black;
+     }
 
     /* footer */
     footer .box_animation p{

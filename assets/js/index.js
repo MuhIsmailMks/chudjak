@@ -50,3 +50,42 @@ document.addEventListener('DOMContentLoaded', function() {
     })
      
   });
+
+
+
+
+// controller ScrollMagic
+let controller = new ScrollMagic.Controller();
+
+// animation scroll effext
+const animations = [
+  { selector: ".og_image", duration: 600, x: 100 },
+  { selector: ".jet", duration: 5000, x: 300 }, 
+];
+
+function adjustXValue() {
+  const screenWidth = window.innerWidth;
+  if (screenWidth > 1200) { 
+    animations.forEach(animation => {
+      animation.x = animation.x * 2;
+    });
+  }
+}
+ 
+adjustXValue();
+window.addEventListener('resize', adjustXValue);
+
+
+
+var tween1, tween2,tween3;
+
+animations.forEach(animation => {
+  var tween = gsap.to(animation.selector, {duration: 300, x: animation.x});
+
+  var scene = new ScrollMagic.Scene({
+    triggerElement: animation.selector,
+    duration: animation.duration
+  })
+  .setTween(tween)
+  .addTo(controller);
+});
