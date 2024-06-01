@@ -20,11 +20,14 @@
     font-style: normal;
   }
 
-  .delius-regular {
-    font-family: "Delius", cursive;
-    font-weight: 400;
-    font-style: normal;
+  .delius-regular{
+    font-family: "Delius", cursive; 
   }
+
+.step_plan{
+    -webkit-text-stroke: .5px black;
+    font-family: "Delius", cursive; 
+}
   
 
 
@@ -472,6 +475,10 @@ nav ul::after{
 .footer{
     background: linear-gradient(180deg, #4C95B9 0%, #C3F9FF 100%);
 }
+
+.text_copy{
+    font-family: "Delius", cursive; 
+  }
 
 footer .box_animation p{
     -webkit-text-stroke: 3.5px black;
