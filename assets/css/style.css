@@ -42,6 +42,37 @@ body{
 }
 
 /* amimation */ 
+/* floatin */
+.float_animation{
+    animation: float 2s ease-in-out infinite;
+  }
+  @keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% { 
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+  }
+  
+.out_animation{
+    animation: out_animation 10s ease-in-out infinite;
+  }
+  @keyframes out_animation {
+  0% {
+    transform: translateX(-30px);
+  }
+  50% { 
+    transform: translateX(40px);
+  }
+  100% {
+    transform: translateX(-30px);
+  }
+  }
+
 /* cloud animation */
 .right_animation_cloud{
     animation: cloud_right 30s linear infinite;
@@ -147,6 +178,7 @@ body{
     font-weight: 700;
     padding: 0 2.5rem;
 }
+ 
  
 @keyframes scroll{
     0%{
@@ -322,6 +354,11 @@ nav .logo_nav p{
 
 nav li a{
     font-family: "Delius", cursive;
+    -webkit-text-stroke: .5px black;
+}
+
+nav .link p{
+    -webkit-text-stroke: 1.8px black;
 }
  
 /* menu button */ 
