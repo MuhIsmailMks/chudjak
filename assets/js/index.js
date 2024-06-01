@@ -53,6 +53,7 @@ let controller = new ScrollMagic.Controller();
 const animations = [
   { selector: ".og_image", duration: 600, x: 100 },
   { selector: ".jet", duration: 5000, x: 300 }, 
+  { selector: ".jet2", duration: 5000, x: 300 }, 
   { selector: ".image_plan1", duration: 5000, x: -100 }, 
   { selector: ".image_plan2", duration: 5000, x: 100 }, 
   { selector: ".image_plan3", duration: 5000, x: -100 }, 
