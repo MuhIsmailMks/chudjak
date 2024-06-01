@@ -349,7 +349,13 @@ nav li a{
     bottom: .7rem;
 }
 
+.box_og{
+    clip-path: polygon(6% 9%, 100% 0, 91% 100%, 0% 100%);
+}
 
+.box_og p{
+    -webkit-text-stroke: 1.5px black !important;
+}
 
 
 /* links */
