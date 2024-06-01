@@ -8,20 +8,12 @@ menu_btn.addEventListener('click', () => {
     links.classList.toggle('active')
 })
 
-function chnageNavImage() {
-    let lebarLayar = window.innerWidth;
-    const gambar = document.querySelector('nav .icon img');
-
-    // if (lebarLayar < 1024) {
-    //     gambar.src = "./assets/images/logo-nav_mobile.png";
-    // } else {
-    //     gambar.src = "./assets/images/logo-nav.png";
-    // }
-}
-
-window.onload = chnageNavImage;
-window.addEventListener('resize', chnageNavImage);
-
+links.addEventListener('click', (e) => {
+  let target = e.target
+  if (target.nodeName === 'A') {
+    links.classList.remove('active')
+  }
+})
 
 // copied 
 
