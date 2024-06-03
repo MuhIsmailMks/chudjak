@@ -85,3 +85,26 @@ animations.forEach(animation => {
   .setTween(tween)
   .addTo(controller);
 });
+
+
+// music
+
+
+document.addEventListener("DOMContentLoaded", function() { 
+  let audio = document.getElementById('background-music'); 
+  let startButton = document.querySelector('.btn_play_music');
+  let closeBtn = document.querySelector('.btn_play_music span');
+
+  audio.play();
+  audio.loop = true;
+
+  startButton.addEventListener('click', function() {
+      if (audio.paused) {
+        audio.play(); 
+        closeBtn.classList.add('hidden')
+    } else {
+        audio.pause(); 
+        closeBtn.classList.remove('hidden')
+    } 
+  });
+});

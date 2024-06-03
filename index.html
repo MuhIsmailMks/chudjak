@@ -16,6 +16,7 @@
 </head>
 <body class="bg-[#52a5ce]">
     
+    <!-- container site -->
     <div class="w-full max-w-[100%] h-auto   relative"> 
 
         <nav class="w-full max-w-[2100px] z-[999] mx-auto absolute top-0 left-[50%] translate-x-[-50%] h-[100px] md:h-[150px] xl:h-[130px] px-[1.2rem] lg:px-[2rem] flex items-center justify-between ">
@@ -28,7 +29,7 @@
             <ul class="absolute lg:left-[40%] min-[1100px]:left-[50%] lg:translate-x-[-50%] lg:h-full flex flex-col items-center lg:flex-row gap-[.85rem] lg:gap-[1.5rem] w-[90%] md:w-[320px] md:h-auto right-[2rem] py-[2rem] lg:py-0 lg:right-auto lg:w-auto bg-black lg:bg-transparent">
                 <li class="relative z-[2]"><a href="#about" class="text-[1.55rem] md:text-[1.45rem] xl:text-[24px]">About</a></li>
                 <li class="relative z-[2]"><a href="#Chudnomics" class="text-[1.55rem] md:text-[1.45rem] xl:text-[24px]">Chudnomics</a></li>
-                <li class="relative z-[2]"><a href="#plans" class="text-[1.55rem] md:text-[1.45rem] xl:text-[24px]">Plan</a></li>
+                <li class="relative z-[2]"><a href="#roadmap" class="text-[1.55rem] md:text-[1.45rem] xl:text-[24px]">Roadmap</a></li>
 
                 
                 <li class="relative z-[2] md:hidden"><a href="http://x.com/chudoneth" target="_blank" class="text-[1.55rem] md:text-[1.45rem] xl:text-[1.75rem] ">Twitter</a></li>
@@ -133,7 +134,7 @@
 
             </div>
 
-             <div class="z-10 lg:bottom-[50px] xl:bottom-[240px] flex items-center justify-center text-[1.5rem] absolute w-[80%] xl:w-[1026px] bottom-[20px] min-[1600px]:bottom-[20vw] min-[1600px]:w-[1400px] h-[45px] md:h-[66px] bg-white rounded-[62px] border-black border-[2px] md:border-[5px]"> 
+             <div class="z-10 lg:bottom-[50px] xl:bottom-[240px] flex items-center justify-center text-[1.5rem] absolute w-[80%] xl:w-[1026px] bottom-[20px] min-[1600px]:bottom-[12vw] min-[1600px]:w-[1400px] h-[45px] md:h-[66px] bg-white rounded-[62px] border-black border-[2px] md:border-[5px]"> 
                 <div class="text  cursor-pointer absolute flex justify-center items-center copy-contract  ">
                     <div class="copied hidden absolute bg-[#fff] top-[-50px] h-[40px] w-[70px]  justify-center items-center border-[2px] border-black">
                         <span class="text-[.8rem] w-[95%] h-[90%]  flex justify-center items-center ink-free_font">copied</span>
@@ -341,8 +342,8 @@
         </section>
 
 
-        <!-- plans -->
-        <section id="plans" class="plans relative w-full h-[1100px] md:h-[1800px] xl:h-[1936px] min-[2000px]:h-[110vw] flex justify-center max-w-[100%] overflow-hidden">
+        <!-- roadmap -->
+        <section id="roadmap" class="plans relative w-full h-[1100px] md:h-[1800px] xl:h-[1936px] min-[2000px]:h-[110vw] flex justify-center max-w-[100%] overflow-hidden">
 
             <!-- text plans -->
             <img src="./assets/images/plans_text.png" alt="plans" class="absolute h-auto object-contain w-[80%] xl:w-[686.98px] min-[2000px]:w-[1000px] top-[100px] min-[2000px]:top-[250px]">
@@ -370,7 +371,7 @@
                     <div class="content  relative flex flex-col items-center justify-center ink-free_font text-[18px] text-left md:text-[20px] xl:text-[42px] w-full h-full font-[400] pl-[1.5rem] xl:pl-[2rem]">
                         <p class=" text-center text-[30px] xl:text-[50px] xl:w-[70%]"> Phase 1</p>
                         <div class="flex items-center uppercase justify-center w-full xl:w-[70%] text-center">
-                            thousands musk buy
+                            thousands must buy
                         </div> 
                     </div>
 
@@ -384,7 +385,7 @@
                     <div class="content  relative flex flex-col items-center justify-center ink-free_font text-[18px] text-left md:text-[20px] xl:text-[42px] w-full h-full font-[400] pl-[1.5rem] xl:pl-[2rem]">
                         <p class=" text-center text-[30px] xl:text-[50px] xl:w-[70%]"> Phase 2</p>
                         <div class="flex items-center uppercase justify-center w-full xl:w-[70%] text-center">
-                            millions musk buy
+                            millions must buy
                         </div> 
                     </div>
 
@@ -398,7 +399,7 @@
                     <div class="content  relative flex flex-col items-center justify-center ink-free_font text-[18px] text-left md:text-[20px] xl:text-[42px] w-full h-full font-[400] pl-[1.5rem] xl:pl-[2rem]">
                         <p class=" text-center text-[30px] xl:text-[50px] xl:w-[70%]"> Phase 3</p>
                         <div class="flex items-center uppercase justify-center w-full xl:w-[70%] text-center">
-                            Billion musk buy
+                            Billions must buy
                         </div> 
                     </div>
 
@@ -508,6 +509,19 @@
         </footer> 
 
     </div>
+ 
+    <!-- music -->
+    <audio  id="background-music" loop autoplay>
+        <source src="./assets/music.mp3" type="audio/mpeg"> 
+    </audio>
+ 
+    <div class="btn_play_music fixed z-[9999] bottom-[80px] right-[80px] h-auto w-auto bg-blue-400 flex justify-center items-center">
+        <button id="toggle-music-btn" class="event-music  absolute w-[60px] h-[60px] bg-[#3A80FE] flex justify-center items-center rounded-full border-2 border-white">
+            <img src="./assets/images/sound.svg" alt="sound icon" class="w-[50%] h-auto object-contain">
+            <span class="absolute h-[100%] w-[4px] bg-white rotate-45"></span>
+        </button>
+    </div>
+
 
   <!-- scroll magic -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
