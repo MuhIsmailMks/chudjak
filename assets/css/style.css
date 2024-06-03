@@ -354,7 +354,12 @@ footer .moving-color_container{
 /* pop up */
 
 .pop_up{
-    background: linear-gradient(180deg, #081B24 0%, #4B3858 100%);
+    background: linear-gradient(130deg, #081B24 0%, #4B3858 100%);
+    background: -webkit-linear-gradient(130deg, #081B24 0%, #4B3858 100%); 
+    background: -moz-linear-gradient(130deg, #081B24 0%, #4B3858 100%);  
+    background: -o-linear-gradient(130deg, #081B24 0%, #4B3858 100%); 
+    background: -ms-linear-gradient(130deg, #081B24 0%, #4B3858 100%);  
+
 }
 
 /* navbar */ 

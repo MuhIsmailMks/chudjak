@@ -12,6 +12,7 @@ links.addEventListener('click', (e) => {
   let target = e.target
   if (target.nodeName === 'A') {
     links.classList.remove('active')
+    menu_btn.classList.remove('active')
   }
 })
 
