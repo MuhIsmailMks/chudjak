@@ -87,24 +87,20 @@ animations.forEach(animation => {
 });
 
 
-// music
-
+// music and popup
 
 document.addEventListener("DOMContentLoaded", function() { 
-  let audio = document.getElementById('background-music'); 
-  let startButton = document.querySelector('.btn_play_music');
-  let closeBtn = document.querySelector('.btn_play_music span');
+  const popUpContainer = document.querySelector('.pop_up')
+  const popUpBtn = document.querySelector('.pop_up .enter_btn')
+  let audio = document.getElementById('background-music');  
 
-  audio.play();
+
+  
+
+  popUpBtn.addEventListener('click' ,() => {
+    popUpContainer.classList.add('hidden') 
+      audio.play();
   audio.loop = true;
-
-  startButton.addEventListener('click', function() {
-      if (audio.paused) {
-        audio.play(); 
-        closeBtn.classList.add('hidden')
-    } else {
-        audio.pause(); 
-        closeBtn.classList.remove('hidden')
-    } 
-  });
+  })
+ 
 });
