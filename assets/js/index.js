@@ -94,13 +94,9 @@ document.addEventListener("DOMContentLoaded", function() {
   const popUpBtn = document.querySelector('.pop_up .enter_btn')
   let audio = document.getElementById('background-music');  
 
-
-  
-
   popUpBtn.addEventListener('click' ,() => {
     popUpContainer.classList.add('hidden') 
       audio.play();
-  audio.loop = true;
+      audio.loop = true;
   })
- 
 });
